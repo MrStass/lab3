@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lab3';
+  selectedRecipe: any;
+  recipes: any[] = [];  
+
+  onRecipeSelected(recipe: any) {
+    this.selectedRecipe = recipe;
+  }
+
+  onRecipeAdded(recipe: any) {
+    this.recipes.push(recipe);
+  }
 }
